@@ -1,0 +1,268 @@
+
+:root {
+  --bg: #240711;
+  --panel: #350b1c;
+  --panel2: #401326;
+  --accent: #d98da7;
+  --accent-light: #f2b6c9;
+  --text: #fff2f6;
+  --muted: #c9aab5;
+  --border: #683047;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.header {
+  background: #310a1a;
+  padding: 18px 6%;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--accent-light);
+  font-size: 27px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: white;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  border-radius: 9px;
+  transition: .2s;
+}
+
+nav button,
+.secondary {
+  padding: 11px 16px;
+  color: var(--text);
+  background: var(--panel2);
+  border: 1px solid var(--border);
+}
+
+nav button:hover,
+.secondary:hover {
+  background: #61223b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 35px auto;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.hero {
+  padding: 55px 35px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #4a142d, #2d0919);
+}
+
+.eyebrow {
+  color: var(--accent-light);
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  color: var(--accent-light);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+h2 {
+  color: var(--accent-light);
+  margin: 25px 0 18px;
+}
+
+h3 {
+  color: var(--accent-light);
+  margin-bottom: 10px;
+}
+
+#subjectHeading,
+.subject-card h3 {
+  color: #8b0000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin: 12px 0;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.class-card,
+.subject-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.class-card:hover,
+.subject-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.class-card h3 {
+  font-size: 26px;
+}
+
+.subject-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.primary {
+  padding: 13px 21px;
+  margin-top: 18px;
+  background: var(--accent);
+  color: #2a0715;
+  font-weight: bold;
+}
+
+.primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.secondary {
+  margin: 8px 0;
+}
+
+.progress {
+  height: 8px;
+  background: #54243a;
+  border-radius: 20px;
+  margin: 18px 0;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: .3s;
+}
+
+#questionText {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 9px;
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.option:hover,
+.option.selected {
+  background: #71304b;
+  border-color: var(--accent-light);
+}
+
+.result-score {
+  font-size: 45px;
+  margin: 20px 0;
+  color: var(--accent-light);
+}
+
+.history-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 50px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .container {
+    width: 92%;
+    margin-top: 20px;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+}
